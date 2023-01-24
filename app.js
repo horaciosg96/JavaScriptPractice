@@ -9,7 +9,14 @@ let carrito = {}
 
 // Eventos
 // El evento DOMContentLoaded es disparado cuando el documento HTML ha sido completamente cargado y parseado
-document.addEventListener('DOMContentLoaded', e => { fetchData() });
+document.addEventListener('DOMContentLoaded', () => {
+    fetchData()
+    if (localStorage.getItem('carrito')) {
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        pintarCarrito()
+    }
+});
+
 cards.addEventListener('click', e => { addCarrito(e) });
 items.addEventListener('click', e => { btnAumentarDisminuir(e) })
 
@@ -81,6 +88,8 @@ const pintarCarrito = () => {
     items.appendChild(fragment)
 
     pintarFooter()
+
+    localStorage.setItem('carrito', JSON.stringify(carrito))
 }
 
 const pintarFooter = () => {
