@@ -26,6 +26,7 @@ const pintarCards = data => {
     data.forEach(item => {
         templateCard.querySelector('h5').textContent = item.title
         templateCard.querySelector('p').textContent = item.precio
+        templateCard.querySelector('img').setAttribute("src", item.thumbnailUrl)
         templateCard.querySelector('button').dataset.id = item.id
         const clone = templateCard.cloneNode(true)
         fragment.appendChild(clone)
@@ -87,7 +88,7 @@ const pintarFooter = () => {
 
     if (Object.keys(carrito).length === 0) {
         footer.innerHTML = `
-        <th scope="row" colspan="5">Carrito vacío con innerHTML</th>
+        <th scope="row" colspan="5">Empty cart, get buying!</th>
         `
         return
     }

@@ -18,28 +18,28 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Item</th>
-                    <th scope="col">Cantidad</th>
-                    <th scope="col">Acción</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Action</th>
                     <th scope="col">Total</th>
                 </tr>
             </thead>
             <tbody id="items"></tbody>
             <tfoot>
                 <tr id="footer">
-                    <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+                    <th scope="row" colspan="5">Empty cart, get buying!</th>
                 </tr>
             </tfoot>
         </table>
-        <h4>Cards</h4>
+        <h4>Products</h4>
         <div class="row" id="cards"></div>
     </div>
 
     <template id="template-footer">
-        <th scope="row" colspan="2">Total productos</th>
+        <th scope="row" colspan="2">Product total</th>
         <td>10</td>
         <td>
             <button class="btn btn-danger btn-sm" id="vaciar-carrito">
-                vaciar todo
+                empty cart
             </button>
         </td>
         <td class="font-weight-bold">$ <span>5000</span></td>
@@ -65,10 +65,11 @@
     <template id="template-card">
         <div class="col-4 mb-2 col-md-4">
             <div class="card">
+                <img src=""alt=""class="card-img-top">
                 <div class="card-body">
                     <h5>Titulo</h5>
                     <p>precio</p>
-                    <button class="btn btn-dark">Comprar</button>
+                    <button class="btn btn-dark">Buy</button>
                 </div>
             </div>
         </div>
