@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const fetchData = async () => {
     try {
-        const res = await fetch('api.json')
+        const res = await fetch('horaciosg96.github.io/JavaScriptPractice/api.json')
         const data = await res.json
     } catch (error) {
         console.log(error)
